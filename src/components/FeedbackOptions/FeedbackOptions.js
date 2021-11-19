@@ -5,11 +5,11 @@ import s from './FeedbackOptions.module.css';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <ul className={s.optionsList}>
     {options.map(label => (
-      <li className={s.feedbackOption}>
+      <li className={s.feedbackOption} 
+          key={label}>
         <button
           type="button"
           className={s.button}
-          key={label}
           onClick={() => onLeaveFeedback(label)}
         >
           {label}
